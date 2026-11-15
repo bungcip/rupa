@@ -1,0 +1,20 @@
+size 320px x 240px
+background black
+seed 12345
+
+let columns = 4
+
+let ring_count = columns * 3
+
+repeat ring_count times
+    circle center at (160px, 120px)
+        radius 24px
+        fill none
+        stroke "#FAB005"
+        width 2px
+
+repeat columns times
+    rectangle at (40px, 200px)
+        size 50px x 20px
+        fill "#FAB005"
+        opacity 0.6

@@ -1,0 +1,21 @@
+size 200px x 120px
+background white
+
+group "Tile"
+    size 50px x 50px
+
+    rectangle at (0px, 0px)
+        size 50px x 50px
+        fill blue
+        stroke white
+        width 3px
+
+place "Tile" at (10px, 30px)
+    z-index 1
+
+place "Tile" at (70px, 30px)
+    z-index 2
+
+place "Tile" at (130px, 30px)
+    z-index 3
+

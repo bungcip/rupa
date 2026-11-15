@@ -1,0 +1,51 @@
+size 320px x 220px
+background "#f4f1ea"
+
+rectangle at (20px, 20px)
+    size 90px x 60px
+    fill "#7950F2"
+    stroke white
+    width 3px
+    rotate 8deg
+
+ellipse center at (200px, 50px)
+    size 100px x 60px
+    fill orange
+
+triangle at (20px, 110px)
+    size 80px x 70px
+    fill green
+
+polygon
+    points
+        (150px, 110px)
+        (220px, 100px)
+        (260px, 160px)
+        (190px, 180px)
+    fill red
+
+line from (20px, 200px) to (140px, 190px)
+    stroke black
+    width 4px
+    cap round
+
+polyline
+    points
+        (160px, 200px)
+        (200px, 180px)
+        (240px, 205px)
+        (280px, 185px)
+    stroke blue
+    width 4px
+    join round
+
+path
+    start at (250px, 100px)
+    line to (280px, 60px)
+    curve to (310px, 100px)
+        control (285px, 70px) and (300px, 75px)
+    line to (280px, 130px)
+    close
+    fill purple
+    stroke black
+    width 2px

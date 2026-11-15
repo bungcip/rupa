@@ -1,0 +1,11 @@
+size 320px x 200px
+background white
+
+// Properties may share the primitive's line.
+rectangle at (10px, 40px) size 80px x 40px fill red
+circle center at (150px, 50px) radius 30px fill blue
+
+// Inline properties can continue in an indented block.
+rectangle at (10px, 120px) size 80px x 40px
+    fill "#7950F2"
+    opacity 0.8

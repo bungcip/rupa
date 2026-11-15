@@ -1,0 +1,10 @@
+size 200px x 100px
+background white
+
+rectangle at (10px, 10px)
+    size 80px x 40px
+    fill red
+
+circle center at (150px, 50px)
+    radius 30px
+    fill blue

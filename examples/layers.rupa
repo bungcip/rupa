@@ -1,0 +1,26 @@
+size 360px x 260px
+background "#101820"
+
+group "Badge"
+    size 120px x 80px
+    rectangle at (0px, 0px)
+        size 120px x 80px
+        fill "#7950F2"
+    circle center at (30px, 40px)
+        radius 18px
+        fill yellow
+    circle center at (60px, 40px)
+        radius 12px
+        fill white
+    circle center at (82px, 40px)
+        radius 12px
+        fill white
+
+place "Badge" at (30px, 30px)
+    z-index 1
+
+place "Badge" at (210px, 120px)
+    z-index 2
+    scale 0.8
+    rotate -8deg
+    opacity 0.75

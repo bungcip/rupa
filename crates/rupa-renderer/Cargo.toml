@@ -1,0 +1,19 @@
+[package]
+name = "rupa-renderer"
+version = { workspace = true }
+edition = { workspace = true }
+license = { workspace = true }
+publish = { workspace = true }
+
+[dependencies]
+thiserror = { workspace = true }
+serde = { workspace = true }
+rupa-ir = { path = "../rupa-ir" }
+rupa-geometry = { path = "../rupa-geometry" }
+rupa-image = { path = "../rupa-image" }
+tiny-skia = "0.12"
+png = "0.18"
+fontdue = "0.9"
+
+[lints]
+workspace = true

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "tasks": [
+    {
+      "id": "basic-shape",
+      "kind": "create",
+      "prompt": "Create a 120px by 90px document with a white background and a red circle centered at (60px, 45px) with radius 25px.",
+      "solution": "solutions/basic-shape.rupa"
+    },
+    {
+      "id": "poster-layers",
+      "kind": "create",
+      "prompt": "Create a 240px by 160px poster with a dark background. Define a reusable group named \"Sun\" containing a yellow circle, then place it twice: once at (30px, 30px) and once at (150px, 80px) with 0.7 opacity.",
+      "solution": "solutions/poster-layers.rupa"
+    },
+    {
+      "id": "reuse-layer",
+      "kind": "create",
+      "prompt": "Create a 200px by 120px document with a white background. Define a group named \"Tile\" that draws a blue square with a white border, and place it three times in a row at x = 10px, 70px, and 130px, all at y = 30px.",
+      "solution": "solutions/reuse-layer.rupa"
+    },
+    {
+      "id": "procedural-pattern",
+      "kind": "create",
+      "prompt": "Create a 160px by 160px document with a black background and seed 12345. Declare a variable columns = 4 and repeat columns*2 times, drawing the same small orange circle each time.",
+      "solution": "solutions/procedural-pattern.rupa"
+    },
+    {
+      "id": "paths-gradients-text",
+      "kind": "create",
+      "prompt": "Create a 240px by 160px document with a linear gradient from orange to purple at 90 degrees. Add a closed purple path with a black stroke, and the text \"Rupa\" at (120px, 130px) in black.",
+      "solution": "solutions/paths-gradients-text.rupa"
+    },
+    {
+      "id": "modify-existing",
+      "kind": "modify",
+      "prompt": "Starting from the provided source, keep the existing blue rectangle and add a red circle centered at (150px, 60px) with radius 25px.",
+      "starter": "starters/modify-existing.rupa",
+      "solution": "solutions/modify-existing.rupa"
+    },
+    {
+      "id": "repair-invalid",
+      "kind": "repair",
+      "prompt": "The provided source is missing the circle radius. Repair it so the circle is drawn with radius 30px, without changing anything else.",
+      "starter": "starters/repair-invalid.rupa",
+      "solution": "solutions/repair-invalid.rupa",
+      "expected_diagnostics": ["S005"]
+    },
+    {
+      "id": "reproduce-reference",
+      "kind": "reference",
+      "prompt": "Reproduce this reference composition: a 180px by 120px white canvas containing a blue circle at (50px, 60px) radius 30px, a red square at (90px, 30px) size 50px, and a black horizontal line from (20px, 100px) to (160px, 100px) with width 3px.",
+      "solution": "solutions/reproduce-reference.rupa"
+    }
+  ]
+}

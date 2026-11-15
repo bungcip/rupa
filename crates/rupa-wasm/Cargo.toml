@@ -1,0 +1,20 @@
+[package]
+name = "rupa-wasm"
+version = { workspace = true }
+edition = { workspace = true }
+license = { workspace = true }
+publish = { workspace = true }
+description = "Browser (WebAssembly) bindings for the Rupa compiler and renderer"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+rupa-syntax = { path = "../rupa-syntax" }
+rupa-compiler = { path = "../rupa-compiler" }
+rupa-renderer = { path = "../rupa-renderer" }
+rupa-image = { path = "../rupa-image" }
+serde_json = { workspace = true }
+
+[lints]
+workspace = true

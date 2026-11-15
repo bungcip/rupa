@@ -1,0 +1,5 @@
+layer "Sky"
+    z-index 0
+
+place "Sky" at (0px, 0px)
+    z-index 1

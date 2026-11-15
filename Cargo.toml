@@ -1,0 +1,46 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/rupa-syntax",
+    "crates/rupa-compiler",
+    "crates/rupa-ir",
+    "crates/rupa-geometry",
+    "crates/rupa-renderer",
+    "crates/rupa-image",
+    "crates/rupa-cli",
+    "crates/rupa-wasm",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[workspace.dependencies]
+# Core dependencies
+thiserror = "1.0"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# CLI
+clap = { version = "4.5", features = ["derive"] }
+
+# Testing
+stats_alloc = "0.1"
+
+# Workspace-wide lints
+[workspace.lints]
+rust.unused_crate_dependencies = "warn"
+rust.unused_imports = "warn"
+rust.unused_variables = "warn"
+clippy.all = "warn"
+clippy.correctness = { level = "deny", priority = -1 }
+clippy.suspicious = { level = "deny", priority = -1 }
+clippy.complexity = "warn"
+clippy.perf = "warn"
+clippy.style = "warn"
+clippy.pedantic = { level = "allow", priority = -1 }
+clippy.nursery = { level = "allow", priority = -1 }

@@ -1,0 +1,26 @@
+size 320px x 240px
+background white
+
+rectangle at (20px, 20px)
+    size 280px x 70px
+    fill gradient
+        from orange
+        to purple
+        angle 90deg
+
+rectangle at (20px, 110px)
+    size 130px x 100px
+    fill pattern dots
+        color "#7950F2"
+        background white
+        size 12px
+
+layer "Glow"
+    size 320px x 240px
+    z-index 1
+    blend screen
+    opacity 0.85
+    effect blur 2px
+    circle center at (230px, 150px)
+        radius 30px
+        fill yellow

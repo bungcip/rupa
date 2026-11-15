@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rupa Playground</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Rupa Playground</h1>
+      <div class="topbar__status">
+        <span class="dot" id="status-dot" aria-hidden="true"></span>
+        <span id="status-text" role="status">Ready</span>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="pane pane--editor" aria-labelledby="editor-title">
+        <header class="pane__header">
+          <h2 id="editor-title">Source</h2>
+          <div class="controls">
+            <label class="visually-hidden" for="examples">Load an example</label>
+            <select id="examples" class="control">
+              <option value="">Examples…</option>
+            </select>
+            <button id="format" class="control" type="button" disabled>
+              Format
+            </button>
+            <button id="render" class="control" type="button" disabled>
+              Render
+            </button>
+            <span class="hint">Ctrl/Cmd+Enter</span>
+          </div>
+        </header>
+
+        <div class="editor">
+          <div class="editor__gutter" id="gutter" aria-hidden="true"></div>
+          <pre
+            class="editor__highlight"
+            id="highlight"
+            aria-hidden="true"
+          ></pre>
+          <textarea
+            id="editor"
+            class="editor__input"
+            spellcheck="false"
+            autocomplete="off"
+            autocapitalize="off"
+            wrap="off"
+            aria-label="Rupa source code"
+          ></textarea>
+        </div>
+
+        <section class="diagnostics" aria-labelledby="diagnostics-title">
+          <h2 id="diagnostics-title">Diagnostics</h2>
+          <ul class="diagnostics__list" id="diagnostics">
+            <li class="diagnostics__empty">No problems.</li>
+          </ul>
+        </section>
+      </section>
+
+      <section class="pane pane--viewer" aria-labelledby="viewer-title">
+        <header class="pane__header">
+          <h2 id="viewer-title">Preview</h2>
+          <div class="controls">
+            <span class="hint" id="canvas-size">—</span>
+            <button id="download" class="control" type="button" disabled>
+              Download PNG
+            </button>
+          </div>
+        </header>
+
+        <div class="viewer">
+          <div class="viewer__stage">
+            <canvas id="preview" width="320" height="240"></canvas>
+            <p class="viewer__placeholder" id="viewer-placeholder">
+              Waiting for the renderer.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

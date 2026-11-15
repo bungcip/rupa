@@ -1,0 +1,23 @@
+size 240px x 180px
+background "#202020"
+
+layer "Pixels"
+    size 240px x 180px
+    mode raster
+    clip true
+    z-index 1
+    clear "#101820"
+    pixel at (30px, 30px)
+        fill red
+    pixel at (32px, 30px)
+        fill orange
+    pixel at (34px, 30px)
+        fill yellow
+    brush
+        size 8px
+        fill "#57D9A3"
+        stroke
+            (40px, 80px)
+            (80px, 60px)
+            (120px, 90px)
+            (160px, 65px)

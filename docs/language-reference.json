@@ -1,0 +1,444 @@
+{
+  "document_model": {
+    "groups": {
+      "children": [
+        "primitives",
+        "place",
+        "let",
+        "repeat"
+      ],
+      "clip": "content clips to the bounds only when size is declared",
+      "keyword": "group",
+      "notes": "never nested directly; child groups enter through place",
+      "placement": "place <name> at (<x>, <y>)",
+      "placement_properties": [
+        "z-index",
+        "opacity",
+        "scale",
+        "rotate",
+        "blend"
+      ],
+      "properties": [
+        "size"
+      ],
+      "size": "optional; omitted measures the children automatically"
+    },
+    "layers": {
+      "background_fill": "a `fill` directly inside a layer paints its full bounds before children",
+      "keyword": "layer",
+      "mode": "vector (default) or raster; layers composite once at their z-index",
+      "notes": "single-use plane; never nested inside another layer",
+      "placement": "not placeable; declaring place against a layer is a semantic error",
+      "properties": [
+        "size",
+        "fill",
+        "mode",
+        "clip",
+        "z-index",
+        "opacity",
+        "blend",
+        "effect"
+      ],
+      "size": "optional; an omitted size defaults to the document canvas"
+    },
+    "root_layer": {
+      "bounds": "document canvas",
+      "implicit": true,
+      "name": "root",
+      "owns": [
+        "top-level drawing primitives",
+        "top-level group declarations",
+        "top-level layer declarations",
+        "top-level place declarations"
+      ],
+      "reserved": true
+    },
+    "settings": {
+      "canonical_order": [
+        "size",
+        "background",
+        "seed"
+      ],
+      "defaults": {
+        "background": "transparent",
+        "size": "256px x 256px"
+      },
+      "optional": [
+        "size",
+        "background",
+        "seed"
+      ],
+      "required": []
+    },
+    "top_level": [
+      "size",
+      "background",
+      "seed",
+      "group",
+      "layer",
+      "place",
+      "let",
+      "repeat",
+      "fn",
+      "primitives"
+    ],
+    "unit": "one .rupa file is exactly one document"
+  },
+  "example": "size 100px x 100px\nbackground white\n\nrectangle at (10px, 10px)\n    size 20px x 20px\n    fill red\n",
+  "extension": ".rupa",
+  "indentation": "4 spaces per level",
+  "keyword_classes": {
+    "keyword": [
+      "and",
+      "background",
+      "brush",
+      "circle",
+      "clear",
+      "ellipse",
+      "fn",
+      "group",
+      "layer",
+      "let",
+      "line",
+      "not",
+      "or",
+      "path",
+      "picture",
+      "pixel",
+      "place",
+      "polygon",
+      "polyline",
+      "random",
+      "rectangle",
+      "repeat",
+      "return",
+      "seed",
+      "size",
+      "square",
+      "text",
+      "triangle"
+    ],
+    "literal": [
+      "false",
+      "true"
+    ],
+    "property": [
+      "align",
+      "angle",
+      "as",
+      "at",
+      "bevel",
+      "blend",
+      "blur",
+      "bold",
+      "brightness",
+      "butt",
+      "cap",
+      "center",
+      "clip",
+      "close",
+      "contain",
+      "contrast",
+      "control",
+      "cover",
+      "curve",
+      "dash",
+      "displacement-map",
+      "effect",
+      "fill",
+      "fit",
+      "font",
+      "from",
+      "gradient",
+      "grayscale",
+      "hue-rotate",
+      "in",
+      "join",
+      "left",
+      "miter",
+      "miter-limit",
+      "mode",
+      "noise",
+      "none",
+      "normal",
+      "opacity",
+      "pattern",
+      "pixelate",
+      "points",
+      "quad",
+      "radial",
+      "radius",
+      "raster",
+      "right",
+      "rotate",
+      "round",
+      "saturation",
+      "scale",
+      "sharpen",
+      "start",
+      "stop",
+      "stroke",
+      "times",
+      "to",
+      "vignette",
+      "weight",
+      "width",
+      "x",
+      "z-index"
+    ]
+  },
+  "keywords": [
+    "align",
+    "and",
+    "angle",
+    "as",
+    "at",
+    "background",
+    "bevel",
+    "blend",
+    "blur",
+    "bold",
+    "brightness",
+    "brush",
+    "butt",
+    "cap",
+    "center",
+    "circle",
+    "clear",
+    "clip",
+    "close",
+    "contain",
+    "contrast",
+    "control",
+    "cover",
+    "curve",
+    "dash",
+    "displacement-map",
+    "effect",
+    "ellipse",
+    "false",
+    "fill",
+    "fit",
+    "fn",
+    "font",
+    "from",
+    "gradient",
+    "grayscale",
+    "group",
+    "hue-rotate",
+    "in",
+    "join",
+    "layer",
+    "left",
+    "let",
+    "line",
+    "miter",
+    "miter-limit",
+    "mode",
+    "noise",
+    "none",
+    "normal",
+    "not",
+    "opacity",
+    "or",
+    "path",
+    "pattern",
+    "picture",
+    "pixel",
+    "pixelate",
+    "place",
+    "points",
+    "polygon",
+    "polyline",
+    "quad",
+    "radial",
+    "radius",
+    "random",
+    "raster",
+    "rectangle",
+    "repeat",
+    "return",
+    "right",
+    "rotate",
+    "round",
+    "saturation",
+    "scale",
+    "seed",
+    "sharpen",
+    "size",
+    "square",
+    "start",
+    "stop",
+    "stroke",
+    "text",
+    "times",
+    "to",
+    "triangle",
+    "true",
+    "vignette",
+    "weight",
+    "width",
+    "x",
+    "z-index"
+  ],
+  "language": "Rupa",
+  "named_colors": [
+    "white",
+    "black",
+    "red",
+    "green",
+    "blue",
+    "yellow",
+    "orange",
+    "purple",
+    "gray",
+    "transparent"
+  ],
+  "primitives": {
+    "circle": {
+      "properties": [
+        "center at",
+        "radius",
+        "fill",
+        "stroke",
+        "width",
+        "rotate",
+        "scale",
+        "opacity"
+      ]
+    },
+    "ellipse": {
+      "properties": [
+        "center at",
+        "size",
+        "fill",
+        "stroke",
+        "width",
+        "rotate",
+        "scale",
+        "opacity"
+      ]
+    },
+    "line": {
+      "properties": [
+        "from",
+        "to",
+        "stroke",
+        "width",
+        "rotate",
+        "scale",
+        "opacity"
+      ]
+    },
+    "path": {
+      "properties": [
+        "start",
+        "line",
+        "curve",
+        "quad",
+        "close",
+        "fill",
+        "stroke",
+        "width",
+        "rotate",
+        "scale",
+        "opacity"
+      ]
+    },
+    "picture": {
+      "properties": [
+        "path",
+        "at",
+        "size",
+        "fit",
+        "rotate",
+        "scale",
+        "opacity"
+      ]
+    },
+    "polygon": {
+      "properties": [
+        "points",
+        "fill",
+        "stroke",
+        "width",
+        "rotate",
+        "scale",
+        "opacity"
+      ]
+    },
+    "polyline": {
+      "properties": [
+        "points",
+        "stroke",
+        "width",
+        "rotate",
+        "scale",
+        "opacity"
+      ]
+    },
+    "rectangle": {
+      "properties": [
+        "at",
+        "size",
+        "fill",
+        "stroke",
+        "width",
+        "rotate",
+        "scale",
+        "opacity"
+      ]
+    },
+    "square": {
+      "properties": [
+        "at",
+        "size",
+        "fill",
+        "stroke",
+        "width",
+        "rotate",
+        "scale",
+        "opacity"
+      ]
+    },
+    "text": {
+      "properties": [
+        "at",
+        "center at",
+        "font",
+        "size",
+        "weight",
+        "fill",
+        "align",
+        "rotate",
+        "scale",
+        "opacity"
+      ]
+    },
+    "triangle": {
+      "properties": [
+        "at",
+        "size",
+        "fill",
+        "stroke",
+        "width",
+        "rotate",
+        "scale",
+        "opacity"
+      ]
+    }
+  },
+  "property_style": [
+    "inline on the primitive line",
+    "indented block",
+    "inline followed by an indented block"
+  ],
+  "property_style_notes": "Inline property lists end at the end of the line. Properties whose value is a block (fill gradient, fill pattern, points, path control) still need their own indented block. Structural declarations (layer, group, repeat, fn) still require an indented body. Canonical formatting expands inline properties to one property per indented line.",
+  "units": [
+    "px",
+    "pt",
+    "%",
+    "deg"
+  ],
+  "version": "0.3.0"
+}

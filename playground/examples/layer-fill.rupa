@@ -1,0 +1,14 @@
+size 240px x 160px
+
+layer "Sky"
+    z-index 0
+    fill gradient
+        from "#87CEEB"
+        to white
+        angle 90deg
+    circle center at (200px, 40px)
+        radius 22px
+        fill yellow
+
+layer "Empty"
+    z-index 1

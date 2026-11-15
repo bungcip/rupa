@@ -1,0 +1,14 @@
+size 200px x 100px
+background white
+
+text "Rupa"
+    at (12px, 48px)
+    font "Rupa Sans"
+    size 32px
+    fill "#7950F2"
+
+text "bold"
+    at (12px, 82px)
+    size 20px
+    weight bold
+    fill black

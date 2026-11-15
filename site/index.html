@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rupa — graphics programming for humans and LLMs</title>
+    <meta
+      name="description"
+      content="Rupa is a compiled, LLM-friendly graphics language for static vector and raster artwork. Write readable source, render deterministic PNGs."
+    />
+    <meta name="theme-color" content="#101014" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%238b7bff'/%3E%3Cpath d='M9 23V9h8a5 5 0 0 1 0 10h-3l6 4' fill='none' stroke='%23101014' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Rupa home">
+        <span class="brand__mark" aria-hidden="true">R</span>
+        <span>Rupa</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="https://github.com/bungcip/rupa">GitHub</a>
+        <a href="https://github.com/bungcip/rupa/blob/main/rupa-specification.md">Specification</a>
+        <a class="button button--small" href="./playground/">Playground</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__copy">
+          <p class="eyebrow">v0.1 · compiled graphics language</p>
+          <h1>Draw with code.<br />Ship a PNG.</h1>
+          <p class="lede">
+            Rupa is a strict, readable language for static vector and raster
+            artwork. Write concise source, get deterministic pixels, and let
+            stable diagnostics catch mistakes early.
+          </p>
+          <div class="actions">
+            <a class="button" href="./playground/">Try it in the playground</a>
+            <a
+              class="button button--ghost"
+              href="https://github.com/bungcip/rupa"
+              >View source</a
+            >
+          </div>
+          <p class="note">
+            The playground runs the real compiler and renderer in your browser.
+            Nothing is uploaded.
+          </p>
+        </div>
+
+        <figure class="hero__media">
+          <div class="window">
+            <div class="window__bar" aria-hidden="true">
+              <span></span><span></span><span></span>
+              <em>examples/layers.rupa</em>
+            </div>
+            <pre class="window__code"><code><span class="tok-key">size</span> 360px x 260px
+<span class="tok-key">background</span> <span class="tok-str">"#101820"</span>
+
+<span class="tok-key">group</span> <span class="tok-str">"Badge"</span>
+    <span class="tok-key">size</span> 120px x 80px
+    <span class="tok-key">rectangle</span> <span class="tok-key">at</span> (0px, 0px)
+        <span class="tok-key">size</span> 120px x 80px
+        <span class="tok-key">fill</span> <span class="tok-str">"#7950F2"</span>
+
+<span class="tok-key">place</span> <span class="tok-str">"Badge"</span> <span class="tok-key">at</span> (30px, 30px)
+<span class="tok-key">place</span> <span class="tok-str">"Badge"</span> <span class="tok-key">at</span> (210px, 120px)
+    <span class="tok-key">scale</span> 0.8</code></pre>
+          </div>
+          <figcaption>
+            <img
+              src="preview.png"
+              width="360"
+              height="260"
+              alt="Rendered example showing two purple badge groups on a dark canvas"
+            />
+            <span>Same source. Same bytes. Every time.</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="features" aria-labelledby="features-title">
+        <h2 id="features-title" class="section-title">Built for reliable output</h2>
+        <div class="feature-grid">
+          <article class="feature">
+            <h3>One canonical way</h3>
+            <p>
+              No aliases, no ambiguous defaults. <code>rupa fmt</code> normalizes
+              source so diffs stay small and generated files stay consistent.
+            </p>
+          </article>
+          <article class="feature">
+            <h3>Errors with a fix</h3>
+            <p>
+              Stable codes such as <code>S005</code> and <code>L010</code>, exact
+              <code>line:column</code> locations, and suggested corrections in
+              text or JSON.
+            </p>
+          </article>
+          <article class="feature">
+            <h3>Composable by design</h3>
+            <p>
+              Define a <code>group</code> once, then <code>place</code> it with its
+              own position, scale, rotation, opacity, and z-index.
+            </p>
+          </article>
+          <article class="feature">
+            <h3>Vector meets raster</h3>
+            <p>
+              Gradients, patterns, text, clipping, and pixel-level raster layers
+              share one document model and one renderer.
+            </p>
+          </article>
+          <article class="feature">
+            <h3>Procedural when needed</h3>
+            <p>
+              Variables, loops, conditionals, functions, and seeded randomness
+              generate repetitive artwork without copy-paste.
+            </p>
+          </article>
+          <article class="feature">
+            <h3>Runs anywhere</h3>
+            <p>
+              Native CLI for files and automation; WebAssembly for an instant
+              browser playground that uses the same pipeline.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="flow" aria-labelledby="flow-title">
+        <h2 id="flow-title" class="section-title">From source to pixels</h2>
+        <ol class="steps">
+          <li>
+            <span class="step__number">01</span>
+            <h3>Write</h3>
+            <p>Describe the canvas, shapes, layers, and paints in <code>.rupa</code> files.</p>
+          </li>
+          <li>
+            <span class="step__number">02</span>
+            <h3>Check</h3>
+            <p>The compiler resolves names, validates properties, and reports actionable diagnostics.</p>
+          </li>
+          <li>
+            <span class="step__number">03</span>
+            <h3>Render</h3>
+            <p>A deterministic CPU renderer composites the graphics IR into a PNG.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="quickstart" aria-labelledby="quickstart-title">
+        <div>
+          <h2 id="quickstart-title">Start in seconds</h2>
+          <p>
+            Install the CLI with Cargo, or skip setup and edit an example in the
+            browser playground.
+          </p>
+          <a class="button" href="./playground/">Open the playground</a>
+        </div>
+        <pre class="terminal"><code><span class="prompt">$</span> git clone https://github.com/bungcip/rupa.git
+<span class="prompt">$</span> cd rupa
+<span class="prompt">$</span> cargo run -p rupa-cli -- render examples/shapes.rupa -o shapes.png
+<span class="ok">rendered examples/shapes.rupa → shapes.png</span></code></pre>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Rupa</strong>
+        <span>v0.1.0 · MIT OR Apache-2.0</span>
+      </div>
+      <nav aria-label="Footer">
+        <a href="./playground/">Playground</a>
+        <a href="https://github.com/bungcip/rupa">GitHub</a>
+        <a href="https://github.com/bungcip/rupa/blob/main/rupa-specification.md">Specification</a>
+      </nav>
+    </footer>
+  </body>
+</html>

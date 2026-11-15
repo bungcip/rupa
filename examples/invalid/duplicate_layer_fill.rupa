@@ -1,0 +1,3 @@
+layer "Sky"
+    fill red
+    fill blue

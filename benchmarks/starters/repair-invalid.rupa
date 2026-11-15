@@ -1,0 +1,5 @@
+size 120px x 120px
+background white
+
+circle center at (60px, 60px)
+    fill green

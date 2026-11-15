@@ -1,0 +1,13 @@
+size 320px x 200px
+background white
+
+text "Rupa"
+    center at (160px, 90px)
+    size 48px
+    weight bold
+    fill "#7950F2"
+
+text "deterministic text"
+    center at (160px, 135px)
+    size 20px
+    fill black

@@ -1,0 +1,15 @@
+size 180px x 120px
+background white
+
+circle center at (50px, 60px)
+    radius 30px
+    fill blue
+
+square at (90px, 30px)
+    size 50px
+    fill red
+
+line from (20px, 100px) to (160px, 100px)
+    stroke black
+    width 3px
+

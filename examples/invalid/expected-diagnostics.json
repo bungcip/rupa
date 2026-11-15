@@ -1,0 +1,9 @@
+{
+  "unknown_property.rupa": ["L006"],
+  "missing_radius.rupa": ["S005"],
+  "unknown_group.rupa": ["S033"],
+  "bad_path.rupa": ["S013"],
+  "place_targets_layer.rupa": ["S034"],
+  "recursive_group_reference.rupa": ["S035"],
+  "duplicate_layer_fill.rupa": ["S036"]
+}

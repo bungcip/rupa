@@ -1,0 +1,9 @@
+group "A"
+    size 10px x 10px
+    place "B" at (0px, 0px)
+        z-index 0
+
+group "B"
+    size 10px x 10px
+    place "A" at (0px, 0px)
+        z-index 0

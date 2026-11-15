@@ -1,0 +1,11 @@
+size 160px x 160px
+seed 12345
+background black
+
+let columns = 4
+
+repeat columns * 2 times
+    circle center at (80px, 80px)
+        radius 12px
+        fill orange
+

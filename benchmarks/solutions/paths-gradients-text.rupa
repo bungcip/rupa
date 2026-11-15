@@ -1,0 +1,24 @@
+size 240px x 160px
+background white
+
+rectangle at (0px, 0px)
+    size 240px x 80px
+    fill gradient
+        from orange
+        to purple
+        angle 90deg
+
+path
+    start at (30px, 70px)
+    line to (90px, 30px)
+    line to (150px, 70px)
+    close
+    fill purple
+    stroke black
+    width 2px
+
+text "Rupa"
+    center at (120px, 130px)
+    size 24px
+    fill black
+

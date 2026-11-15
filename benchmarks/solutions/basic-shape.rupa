@@ -1,0 +1,7 @@
+size 120px x 90px
+background white
+
+circle center at (60px, 45px)
+    radius 25px
+    fill red
+

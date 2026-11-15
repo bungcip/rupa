@@ -1,0 +1,17 @@
+size 240px x 160px
+background "#101820"
+
+group "Sun"
+    size 60px x 60px
+
+    circle center at (30px, 30px)
+        radius 25px
+        fill yellow
+
+place "Sun" at (30px, 30px)
+    z-index 1
+
+place "Sun" at (150px, 80px)
+    z-index 2
+    opacity 0.7
+

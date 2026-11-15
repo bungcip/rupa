@@ -1,0 +1,77 @@
+// Synthetic AST baseline fixture (TASK-097).
+//
+// Repeated group names, layer names, placements, and text payloads expose the
+// deduplication opportunities that interned identifiers will target. It must
+// parse without diagnostics and is never rendered.
+
+size 320px x 200px
+background "#101820"
+
+group "Card"
+    size 80px x 40px
+    rectangle at (0px, 0px)
+        size 80px x 40px
+        fill "#7950F2"
+    text "Repeated label" at (4px, 20px)
+        size 10px
+        fill white
+
+group "Card"
+    size 80px x 40px
+    rectangle at (0px, 0px)
+        size 80px x 40px
+        fill "#7950F2"
+    text "Repeated label" at (4px, 20px)
+        size 10px
+        fill white
+
+group "Card"
+    size 80px x 40px
+    rectangle at (0px, 0px)
+        size 80px x 40px
+        fill "#7950F2"
+    text "Repeated label" at (4px, 20px)
+        size 10px
+        fill white
+
+place "Card" at (10px, 10px)
+    z-index 1
+
+place "Card" at (100px, 10px)
+    z-index 2
+    scale 0.5
+    rotate -4deg
+    opacity 0.75
+
+place "Card" at (190px, 10px)
+    z-index 3
+
+layer "Background"
+    fill "#101820"
+    rectangle at (0px, 0px)
+        size 320px x 200px
+        fill "#101820"
+
+layer "Background"
+    fill "#101820"
+    rectangle at (0px, 0px)
+        size 320px x 200px
+        fill "#101820"
+
+layer "Background"
+    fill "#101820"
+    rectangle at (0px, 0px)
+        size 320px x 200px
+        fill "#101820"
+
+layer "Foreground"
+    fill white
+    place "Card" at (10px, 10px)
+    place "Card" at (100px, 10px)
+    place "Card" at (190px, 10px)
+    text "Repeated label" at (10px, 180px)
+        size 10px
+        fill "#7950F2"
+    text "Repeated label" at (110px, 180px)
+        size 10px
+        fill "#7950F2"
